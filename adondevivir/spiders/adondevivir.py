@@ -4,7 +4,7 @@ from adondevivir.items import PredioItemLoader
 class AdondeVivirSpider(Spider):
     name = 'adondevivir'
     start_urls = [
-      'https://www.adondevivir.com/propiedades/flat-petit-tower-53931295.html'
+      'https://www.adondevivir.com/departamentos-en-venta-q-lima.html'
     ]
 
     def parse(self, response):
