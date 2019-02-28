@@ -1,4 +1,4 @@
-from scrapy import Spider
+from scrapy import Spider, Request
 from adondevivir.items import PredioItemLoader
 
 class AdondeVivirSpider(Spider):
@@ -8,7 +8,11 @@ class AdondeVivirSpider(Spider):
     ]
 
     def parse(self, response):
-        pass
+        item = response.xpath('//h4[has-class("aviso-data-title")/a')
+        for item in items:
+            url = item.xpath("./@href").extract_first(default='')
+            url = response.urljoin(url)
+            yield Request(url=url, callback=self.parse_predio)
 
     def parse_predio(self, response):
         pl = PredioItemLoader(response=response)
