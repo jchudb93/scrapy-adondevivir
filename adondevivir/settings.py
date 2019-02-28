@@ -16,7 +16,7 @@ NEWSPIDER_MODULE = 'adondevivir.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'adondevivir (+http://www.yourdomain.com)'
+# USER_AGENT = 'adondevivir (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
