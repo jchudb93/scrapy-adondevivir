@@ -5,6 +5,7 @@ from w3lib.html import remove_tags
 from adondevivir.utils import calculate_total_of_pages
 
 
+
 class AdondeVivirSpider(Spider):
     name = 'adondevivir'
     start_urls = [
